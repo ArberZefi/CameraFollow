@@ -1,0 +1,20 @@
+//# CameraFollow
+//Here is the script from the cameraFollow tutorial
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class FollowPlayer : MonoBehaviour
+{
+    public GameObject player;
+    public Vector3 offset = new Vector3(0, 5, -7);
+
+    
+
+    // Update is called once per frame
+    void LateUpdate()
+    {
+        Debug.Log("Take the cams transforms and put to the players");
+        transform.position = player.transform.position + offset;
+    }
+}
